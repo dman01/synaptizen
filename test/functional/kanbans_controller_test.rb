@@ -3,6 +3,7 @@ require 'test_helper'
 class KanbansControllerTest < ActionController::TestCase
   setup do
     @kanban = kanbans(:one)
+    @update={:title=>'Kaniban board',:description=>' A test board'}
   end
 
   test "should get index" do
@@ -18,7 +19,7 @@ class KanbansControllerTest < ActionController::TestCase
 
   test "should create kanban" do
     assert_difference('Kanban.count') do
-      post :create, :kanban => @kanban.attributes
+      post :create, :kanban => @update
     end
 
     assert_redirected_to kanban_path(assigns(:kanban))
@@ -35,7 +36,7 @@ class KanbansControllerTest < ActionController::TestCase
   end
 
   test "should update kanban" do
-    put :update, :id => @kanban.to_param, :kanban => @kanban.attributes
+    put :update, :id => @kanban.to_param, :kanban => @update
     assert_redirected_to kanban_path(assigns(:kanban))
   end
 

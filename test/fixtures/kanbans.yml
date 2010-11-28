@@ -1,9 +1,9 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
-one:
-  title: MyString
-  description: MyText
-
-two:
-  title: MyString
-  description: MyText
+customer_kanban:
+  title: Customer Kanban
+  description: A classic kanban board using a couple of classic states such as backlog, ongoing and done
+    
+pommery_kanban:
+  title: Pommery kanban
+  description: Adapted to work in a family environment
